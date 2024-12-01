@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)202X by Orkhan Nabiyev
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>        
+    </head>
+    <body>
+        <header>
+            <h1>Code Artist</h1>
+            <nav id="navbar">
+                <a href="index.html" class="links">Home</a>
+                <a href="team-members.html" class="links">Team Members</a>
+                <a href="hour-of-code.html" class="links">Hour of Code</a>
+                <a href="web-project.html" class="links">Project</a>
+                <a href="code-artist.html" class="links">Code Art</a>
+            </nav>
+        </header>
+        <div style="text-align:center">
+            <canvas id="art-canvas" width="640" height="480">
+                Sorry ... your browser doesn't support the HTML5 canvas element.
+            </canvas>        
+        </div>          
+<p>This is Code Art of Team 3A1O (Team 50) inspired by flag of Azerbaijan. This is an explanation of Code Art:
+    Breaking down the code, it basicly creates a flag with three horizontal stripes. A white crescent and an 8-pointed star are positioned on the central red stripe.
+    The drawCrescent function draws the crescent by finding the intercept points of the two circles and using those points to calculate the start and end angles for the outer and inner circle. The drawStar function creates an 8-pointed star by alternating between longer and shorter radius as it connects points around a circle.</p>
+
+        <script type="text/javascript">
+            // Get reference to the 2D context of the canvas
+            let canvas = document.getElementById("art-canvas");
+            let context = canvas.getContext("2d");
+            // Set the color for drawing lines using red, green and blue components
+            // context.strokeStyle = 'rgb(255, 0, 0)';
+            context.strokeStyle = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+            DrawAzerbaijaniFlag(context);
+        </script>
+    </body>
+    <footer>
+        <div class="footer-container">
+            <div class="horizontal-flex">
+            <div class="footer-logo">
+                <a href="https://www.ada.edu.az" target="_blank">
+                    <img src="media/ada_logo_color.png" alt="ADA University Logo">
+                </a>
+            </div>
+            <div class="team-emails">
+                <p>Contact the team:</p>
+                <ul>
+                    <li><a href="mailto:anazaraliyev22771@ada.edu.az">Aykhan Nazaraliyev</a></li>
+                    <li><a href="mailto:ahuseynova20515@ada.edu.az ">Asiman Huseynova</a></li>
+                    <li><a href="mailto:asafaraliyev19785@ada.edu.az">Ali Safaraliyev </a></li>
+                    <li><a href="mailto:onabiyev23354@ada.edu.az">Orkhan Nabiyev</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-text">
+                <p>&copy; <span id="current-year"></span> Team 50. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</html>
